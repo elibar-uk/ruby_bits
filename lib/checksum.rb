@@ -1,7 +1,5 @@
 class Checksum
 
-  attr_reader :ar_of_ar
-
   def initialize(filename)
     @filename = filename
     @ar_of_ar = Array.new
