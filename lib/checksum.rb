@@ -20,6 +20,13 @@ class Checksum
     data_array.each { |n| n.sort! }
   end
 
+  def differ
+    num = []
+    sort_inner.each { |b|  num << b[b.length-1] - b[0] }
+    num
+  end
 
-
+  def get_sum
+    differ.inject(0) { |sum,x| sum + x }
+  end
 end
