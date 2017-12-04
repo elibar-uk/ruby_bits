@@ -12,4 +12,18 @@ describe Checksum do
       expect(subject.read_file).to eq(file.read)
     end
   end
+
+  describe "#data_array" do
+    it "returns file data in multi-dimensional array" do
+      ar = [1224,926,1380,688,845,109,118,88,1275,1306,91,796,102,1361,27,995]
+      expect(subject.data_array.first).to eq(ar)
+    end
+  end
+
+  describe "#sort_inner" do
+    it "returns array of sorted arrays" do
+      sorted_ar = [27,88,91,102,109,118,688,796,845,926,995,1224,1275,1306,1361,1380]
+      expect(subject.sort_inner.first).to eq(sorted_ar)
+    end
+  end
 end
