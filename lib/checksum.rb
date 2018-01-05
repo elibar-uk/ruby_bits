@@ -1,5 +1,5 @@
 class Checksum
-
+# checksum - http://adventofcode.com/2017/day/2
   def initialize(filename)
     @filename = filename
     @ar_of_ar = Array.new
